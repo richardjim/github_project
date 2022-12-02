@@ -20,20 +20,17 @@ function navbar() {
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline space-x-8 ">
                 <a
-                  
                   className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   <Link to="/">Home</Link>
                 </a>
                   <a
-                  
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     <Link to="/About">About</Link>
                   </a>
 
                   <a
-                    // href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     <Link to="/Jobs">Projects</Link>

@@ -13,7 +13,7 @@ export default function Pagination({
         <p className="text-md text-gray-500">
           Showing
           <span className="font-medium m-1">
-            {currentPage * postsPerPage - 10}
+            {currentPage }
           </span>
           to
           <span className="font-medium m-1">

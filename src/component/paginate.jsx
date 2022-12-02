@@ -10,7 +10,7 @@ const Pagination = ({ currentPage, usersPerPage, totalUsers, paginate }) => {
   return (
     <nav>
       <ul className="pagination">
-        <li class="page-item">
+        <li className="page-item">
           <Link
             className="prev"
             to={currentPage - 1}
@@ -18,7 +18,7 @@ const Pagination = ({ currentPage, usersPerPage, totalUsers, paginate }) => {
             aria-label="Previous"
           >
             <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
+            <span className="sr-only">Previous</span>
           </Link>
         </li>
         {pageNumbers.map((number) => (
@@ -32,7 +32,7 @@ const Pagination = ({ currentPage, usersPerPage, totalUsers, paginate }) => {
             </Link>
           </li>
         ))}
-        <li class="page-item">
+        <li className="page-item">
           <Link
             className="next"
             to={currentPage + 1}
@@ -40,7 +40,7 @@ const Pagination = ({ currentPage, usersPerPage, totalUsers, paginate }) => {
             aria-label="Next"
           >
             <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
+            <span className="sr-only">Next</span>
           </Link>
         </li>
       </ul>

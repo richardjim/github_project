@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { CodeIcon } from "@heroicons/react/solid";
 import Navbar from "./navbar";
 import Footer from "./footer";
-import Pagination from "./pagination";
+import Pagination from "./paginate";
 import { Link } from "react-router-dom";
 
 const jobs = () => {
   const [lists, setList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(12);
+  const [usersPerPage] = useState(12);
 
   const fetchData = async () => {
     const res = await fetch("https://api.github.com/users/richardjim/repos");
@@ -24,14 +24,12 @@ const jobs = () => {
   // const getProject = (id) => {
   //   alert(setList.id);
   // };
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = lists.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = lists.slice(indexOfFirstUser, indexOfLastUser);
 
   // Change page
-  const paginateFront = () => setCurrentPage(currentPage + 1);
-  const paginateBack = () => setCurrentPage(currentPage - 1);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -51,9 +49,9 @@ const jobs = () => {
               </p>
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 ">
-              {currentPosts.map((list, _id) => (
+              {currentUsers.map((list, _id) => (
                 <li key={_id}>
-                  <div class="flex justify-center">
+                  <div className="flex justify-center">
                     <div className="block p-6 rounded-lg shadow-lg text-white-400 bg-gray-900 body-font   border-4 border-gray-800">
                       <h5 className="text-gray-500 text-xl leading-tight font-medium mb-2">
                         {list.name}
@@ -78,11 +76,9 @@ const jobs = () => {
             <br />
             <br />
             <Pagination
-              postsPerPage={postsPerPage}
-              totalPosts={lists.length}
-              paginateBack={paginateBack}
-              paginateFront={paginateFront}
-              currentPage={currentPage}
+              usersPerPage={usersPerPage}
+              totalUsers={lists.length}
+              paginate={paginate}
             />
           </div>
         </div>
