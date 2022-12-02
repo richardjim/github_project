@@ -20,7 +20,7 @@ const Home = () => {
         <Navbar />
         <About />
         {/* <Jobs /> */}
-        {/* <Projects /> */}
+        <Projects />
         <Contact />
         <Footer />
       </main>

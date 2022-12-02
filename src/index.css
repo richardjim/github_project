@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,10 @@
 
 body {
   font-family: "Poppins", sans-serif !important;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: rgba(2, 3, 53, 0.11);
 }
 .pagination {
   display: flex;

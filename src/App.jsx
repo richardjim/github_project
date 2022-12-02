@@ -2,8 +2,9 @@ import Home from "./views/Home";
 import { Route, Routes, Link } from "react-router-dom";
 import "./index.css";
 import { ErrorBoundary } from "react-error-boundary";
-// import About from "./views/About";
+import ErrorPage from "./views/errorPage";
 import { HelmetProvider } from "react-helmet-async";
+import Jobs from "./component/jobs";
 
 function ErrorFallback({ error }) {
   return (
@@ -57,8 +58,9 @@ function App() {
         <ErrorBoundary FallbackComponent={ErrorFallback}>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            {/* <Route exact path="/Jobs" element={<Jobs />} /> */}
+            <Route exact path="/Jobs" element={<Jobs />} />
             {/* <Route exact path="/About" element={<About />} /> */}
+            <Route exact path="/About" element={<ErrorPage />} />
           </Routes>
         </ErrorBoundary>
       </HelmetProvider>
