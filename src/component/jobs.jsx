@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { CodeIcon } from "@heroicons/react/solid";
+import Home from "../views/Home";
 
 const jobs = () => {
   const [lists, setList] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
 
   const fetchData = async () => {
     const res = await fetch("https://api.github.com/users/richardjim/repos");
@@ -17,7 +17,9 @@ const jobs = () => {
   }, []);
 
   return (
+   
     <>
+     <Home/>
       <div className="m-5 ">
         <div className="text-center lg:px-20">
           <div className="flex flex-col w-full mb-20">
@@ -26,14 +28,14 @@ const jobs = () => {
               Apps I've Built
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-white">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Explicabo facilis repellat ab cupiditate alias vero aliquid
-              obcaecati quisquam fuga dolore.
+              I have built amazing web applications and implemented responsive
+              designs during my software engineering journey. <br />
+              Below are list github repo Projects
             </p>
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 ">
             {lists.map((list, _id) => (
-              <li  key={_id}>
+              <li key={_id}>
                 <div class="flex justify-center">
                   <div className="block p-6 rounded-lg shadow-lg text-white-400 bg-gray-900 body-font   border-4 border-gray-800">
                     <h5 className="text-gray-500 text-xl leading-tight font-medium mb-2">
@@ -57,6 +59,7 @@ const jobs = () => {
           </ul>
         </div>
       </div>
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 function navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-gray-800 ">
+        <div className="max-w-7xl ml-12 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -22,21 +23,21 @@ function navbar() {
                     href="#"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    About Me
+                    <Link to="/About">About</Link>
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Projects
+                    <Link to="/About">Projects</Link>
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Contact Me
+                    <Link to="/Contact-us">Contact</Link>
                   </a>
                 </div>
               </div>
@@ -104,21 +105,21 @@ function navbar() {
                   href="#"
                   className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  About Me
+                  <Link to="/About">About</Link>
                 </a>
 
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
+                  <Link to="/About">Projects</Link>
                 </a>
 
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Contact Me
+                  <Link to="/Contact-us">Contact</Link>
                 </a>
               </div>
             </div>
@@ -126,7 +127,7 @@ function navbar() {
         </Transition>
       </nav>
 
-{/*      
+      {/*      
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"></div>
       </main> */}
