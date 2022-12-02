@@ -4,6 +4,7 @@ import { CodeIcon } from "@heroicons/react/solid";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Pagination from "./pagination";
+import { Link } from "react-router-dom";
 
 const jobs = () => {
   const [lists, setList] = useState([]);
@@ -20,6 +21,9 @@ const jobs = () => {
     fetchData();
   }, []);
 
+  // const getProject = (id) => {
+  //   alert(setList.id);
+  // };
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -57,13 +61,14 @@ const jobs = () => {
                       <p className="text-green text-base mb-4">
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
-                        {list.avatar_url}
+                        {list.id}
                       </p>
                       <button
                         type="button"
                         className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        // onClick={() => getProject()}
                       >
-                        See More...
+                        <Link to={`lists/${list.id}`}> See More...</Link>
                       </button>
                     </div>
                   </div>

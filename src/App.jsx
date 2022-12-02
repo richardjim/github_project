@@ -5,6 +5,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorPage from "./views/errorPage";
 import { HelmetProvider } from "react-helmet-async";
 import Jobs from "./component/jobs";
+import Job from "./component/job";
 
 function ErrorFallback({ error }) {
   return (
@@ -61,6 +62,7 @@ function App() {
             <Route exact path="/Jobs" element={<Jobs />} />
             {/* <Route exact path="/About" element={<About />} /> */}
             <Route exact path="/About" element={<ErrorPage />} />
+            <Route path="lists/:listId" element={<Job />} />,
           </Routes>
         </ErrorBoundary>
       </HelmetProvider>
