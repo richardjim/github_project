@@ -19,28 +19,19 @@ function navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline space-x-8 ">
-                <a
-                  className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  <Link to="/">Home</Link>
-                </a>
-                  <a
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
+                  <a className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <Link to="/">Home</Link>
+                  </a>
+                  <a className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
                     <Link to="/About">About</Link>
                   </a>
 
-                  <a
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
+                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     <Link to="/Jobs">Projects</Link>
                   </a>
 
-                  <a
-                 
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    <Link to="/Contact-us">Contact Us</Link>
+                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                    <Link to="/Contact-Us">Contact Us</Link>
                   </a>
                 </div>
               </div>
@@ -122,7 +113,7 @@ function navbar() {
                   href="#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  <Link to="/Contact-us">Contact</Link>
+                  <Link to="/Contact-Us">Contact</Link>
                 </a>
               </div>
             </div>

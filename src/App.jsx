@@ -6,6 +6,7 @@ import ErrorPage from "./views/errorPage";
 import { HelmetProvider } from "react-helmet-async";
 import Jobs from "./component/jobs";
 import Job from "./component/job";
+import Info from "./views/Info";
 
 function ErrorFallback({ error }) {
   return (
@@ -62,7 +63,8 @@ function App() {
             <Route exact path="/Jobs" element={<Jobs />} />
             {/* <Route exact path="/About" element={<About />} /> */}
             <Route exact path="/About" element={<ErrorPage />} />
-            <Route path="lists/:listId" element={<Job />} />,
+            <Route path="lists/:listId" element={<Job />} />
+            <Route path="/Contact-Us" element={<Info />} />
           </Routes>
         </ErrorBoundary>
       </HelmetProvider>
