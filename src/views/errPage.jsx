@@ -34,13 +34,14 @@ const errPage = () => {
           <p className="text-3xl">
             Looks like our services are currently offline
           </p>
-          <a
+
+          <Link
             rel="noopener noreferrer"
-            href="#"
             className="px-8 py-3 font-semibold rounded dark:dark:bg-violet-400 dark:dark:text-gray-900"
+            to="/"
           >
-            <Link to="/">Back to homepage</Link>
-          </a>
+            Back to homepage
+          </Link>
         </div>
       </section>
     </>

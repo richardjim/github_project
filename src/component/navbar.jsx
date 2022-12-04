@@ -19,20 +19,33 @@ function navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline space-x-8 ">
-                  <a className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <Link to="/">Home</Link>
-                  </a>
-                  <a className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <Link to="/About">About</Link>
-                  </a>
+                  <Link
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    to="/"
+                  >
+                    Home
+                  </Link>
 
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <Link to="/Jobs">Projects</Link>
-                  </a>
+                  <Link
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    to="/About"
+                  >
+                    About
+                  </Link>
 
-                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <Link to="/Contact-Us">Contact Us</Link>
-                  </a>
+                  <Link
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    to="/Jobs"
+                  >
+                    Projects
+                  </Link>
+
+                  <Link
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    to="/Contact-Us"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
@@ -95,26 +108,26 @@ function navbar() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
+                <Link
                   className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/About"
                 >
-                  <Link to="/About">About</Link>
-                </a>
+                  About
+                </Link>
 
-                <a
-                  href="#"
+                <Link
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/About"
                 >
-                  <Link to="/About">Projects</Link>
-                </a>
+                  Projects
+                </Link>
 
-                <a
-                  href="#"
+                <Link
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/Contact-Us"
                 >
-                  <Link to="/Contact-Us">Contact</Link>
-                </a>
+                  Contact
+                </Link>
               </div>
             </div>
           )}
