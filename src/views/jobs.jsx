@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { CodeIcon } from "@heroicons/react/solid";
-import Navbar from "./navbar";
-import Footer from "./footer";
-import Pagination from "./paginate";
+import Navbar from "../component/navbar";
+import Footer from "../component/footer";
+import Pagination from "../component/paginate";
 import { Link } from "react-router-dom";
-import Job from "./job";
+import Job from "../component/job";
 
 const jobs = () => {
   const [lists, setList] = useState([]);
@@ -51,7 +51,14 @@ const jobs = () => {
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 ">
               {currentUsers.map((list, _id) => (
-                  <Job key={_id} name={list.name}  button={<Link to={`lists/${list.id}`}> See More...</Link>}/>
+                <Job
+                  key={_id}
+                  name={list.name}
+                  title={list.full_name}
+                  // email={list.ssh_url}
+                  description={list.description}
+                  button={<Link to={"/lists/" + list.id}> See More...</Link>}
+                />
                 // <li key={_id}>
                 //   <div className="flex justify-center">
                 //     <div className="block p-6 rounded-lg shadow-lg text-white-400 bg-gray-900 body-font   border-4 border-gray-800">

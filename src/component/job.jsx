@@ -1,6 +1,6 @@
 import React from "react";
 
-const Job = ({ name, id, button }) => {
+const Job = ({ name, id, button, description, title, email }) => {
   return (
     <li>
       <div className="flex justify-center">
@@ -11,7 +11,9 @@ const Job = ({ name, id, button }) => {
           <p className="text-green text-base mb-4">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
-            {id}
+            {/* {id} {description}  */}
+           {title} 
+            {email}
           </p>
           <button
             type="button"
