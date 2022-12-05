@@ -55,8 +55,8 @@ const jobs = () => {
                   key={_id}
                   name={list.name}
                   title={list.full_name}
-                  // email={list.ssh_url}
-                  description={list.description}
+                  email={list.language}
+                  description={<img src={list.owner.avatar_url} alt={list.name} className="rounded-full w-20 ml-2"/>} 
                   button={<Link to={"/lists/" + list.id}> See More...</Link>}
                 />
                 // <li key={_id}>

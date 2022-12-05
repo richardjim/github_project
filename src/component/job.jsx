@@ -5,15 +5,17 @@ const Job = ({ name, id, button, description, title, email }) => {
     <li>
       <div className="flex justify-center">
         <div className="block p-6 rounded-lg shadow-lg text-white-400 bg-gray-900 body-font   border-4 border-gray-800">
+       <span className="flex justify-center"> {description} </span>
           <h5 className="text-gray-500 text-xl leading-tight font-medium mb-2">
-            {name}
+            {name} <br/>
+        <strong>{email}</strong>
           </h5>
+         
           <p className="text-green text-base mb-4">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
-            {/* {id} {description}  */}
+            {id} 
            {title} 
-            {email}
           </p>
           <button
             type="button"
