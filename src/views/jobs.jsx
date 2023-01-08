@@ -1,8 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { CodeIcon } from "@heroicons/react/solid";
-import Navbar from "../component/navbar";
-import Footer from "../component/footer";
 import Pagination from "../component/paginate";
 import { Link } from "react-router-dom";
 import Job from "../component/job";
@@ -35,8 +33,7 @@ const jobs = () => {
   return (
     <>
       <main className="text-gray-400 bg-gray-900 body-font">
-        <Navbar />
-        <div className="m-5 ">
+        <div className="p-5 ">
           <div className="text-center lg:px-20">
             <div className="flex flex-col w-full mb-20">
               <CodeIcon className="mx-auto inline-block w-10 mb-4" />
@@ -56,8 +53,15 @@ const jobs = () => {
                   name={list.name}
                   title={list.full_name}
                   email={list.language}
-                  description={<img src={list.owner.avatar_url} alt={list.name} className="rounded-full w-20 ml-2"/>} 
-                  button={<Link to={"/lists/" + list.id}> See More...</Link>}
+                  description={
+                    <img
+                      src={list.owner.avatar_url}
+                      alt={list.name}
+                      className="rounded-full w-20 ml-2"
+                    />
+                  }
+                  // button={<Link to={"/lists/" + list.id}> See More...</Link>}
+                  button={<Link to={`/lists/${list.id}`}> See</Link>}
                 />
                 // <li key={_id}>
                 //   <div className="flex justify-center">
@@ -91,7 +95,6 @@ const jobs = () => {
             />
           </div>
         </div>
-        <Footer />
       </main>
     </>
   );

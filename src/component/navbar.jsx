@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Footer from "./footer";
 
 function navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,6 +139,10 @@ function navbar() {
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"></div>
       </main> */}
+
+      <Outlet />
+
+      <Footer />
     </div>
   );
 }

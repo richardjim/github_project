@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative">
+    <section
+      id="contact"
+      className="relative text-gray-400 bg-gray-900 body-font"
+    >
       <div className="container px-5 py-10 ml-12 flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe

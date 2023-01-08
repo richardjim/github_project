@@ -10,19 +10,19 @@ import SEO from "../component/seo";
 const Home = () => {
   return (
     <>
-      <SEO
+      {/* <SEO
         title="Github Portfolio"
         description="List of Github Repositories"
         name="AltSchool Africa Test'
         type='article."
-      />
+      /> */}
       <main className="text-gray-400 bg-gray-900 body-font">
-        <Navbar />
+        {/* <Navbar /> */}
         <About />
         {/* <Jobs /> */}
         {/* <Projects /> */}
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
